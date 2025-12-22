@@ -504,4 +504,65 @@ footer {
         border-left: none;
     }
 }
+/* ========================================= */
+/* 📱 AJUSTES MOBILE REALES (SIN ROMPER PC) */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+    .nav-container {
+        flex-wrap: wrap;              /* permite bajar de línea */
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;              /* 🔥 clave */
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 6px 8px;              /* links más compactos */
+        white-space: nowrap;          /* evita cortes raros */
+    }
+
+    .logo {
+        height: 42px;
+        margin-bottom: 6px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        height: auto;
+        padding: 40px 16px;
+    }
+
+    .hero-box {
+        max-width: 100%;
+        padding: 26px 18px;
+        transform: none !important;   /* quita el corrimiento */
+    }
+
+    .hero-box h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .hero-box p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        margin-top: 0;
+        padding: 18px 12px;
+        font-size: 13px;
+    }
+}
+
 
