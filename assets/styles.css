@@ -436,4 +436,72 @@ footer {
         padding: 16px 10px;
     }
 }
+/* ================================================= */
+/* 🔥 FIX MOBILE REAL – SIN TOCAR DESKTOP            */
+/* ================================================= */
+@media (max-width: 768px) {
+
+    /* HERO: liberar reglas desktop */
+    .hero {
+        height: auto !important;
+        padding: 50px 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* HERO BOX */
+    .hero-box {
+        max-width: 100% !important;
+        padding: 26px 18px !important;
+        margin: 0 auto !important;
+        transform: none !important; /* 🔥 elimina el desplazamiento */
+    }
+
+    /* TÍTULO */
+    .hero-box h1,
+    .hero-title {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        white-space: normal !important; /* 🔥 permite que baje */
+        text-align: center !important;
+    }
+
+    .hero-title span {
+        display: block;
+        font-size: 1em;
+    }
+
+    /* TEXTO */
+    .hero-box p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* NAVBAR: simple, sin hamburguesa */
+    nav {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 4px 6px;
+    }
+
+    /* LOGO */
+    .logo {
+        height: 42px;
+    }
+
+    /* TÍTULOS DE SECCIÓN */
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        padding-left: 0;
+        border-left: none;
+    }
+}
 
