@@ -649,4 +649,56 @@ footer {
     }
 }
 
+/* ========================================= */
+/* 📱 FIX DEFINITIVO HERO INICIO (MOBILE)    */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* Evita scroll fantasma horizontal */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* HERO: nunca más alto que la pantalla */
+    .hero {
+        min-height: calc(100vh - 120px); /* header + margen */
+        height: calc(100vh - 120px);
+        max-height: calc(100vh - 120px);
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Caja del texto */
+    .hero-box {
+        max-height: 100%;
+        max-width: 100%;
+        padding: 22px 18px;
+        overflow: hidden; /* CLAVE */
+        transform: none !important;
+    }
+
+    /* Título */
+    .hero-box h1 {
+        font-size: 24px;
+        line-height: 1.15;
+        white-space: normal;
+        margin-bottom: 12px;
+    }
+
+    /* Texto */
+    .hero-box p {
+        font-size: 14.5px;
+        line-height: 1.45;
+    }
+
+    /* Footer no empuja */
+    .footer {
+        margin-top: 0;
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+}
+
 
