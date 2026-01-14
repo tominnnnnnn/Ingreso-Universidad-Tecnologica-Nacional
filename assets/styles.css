@@ -716,6 +716,29 @@ footer {
         margin-bottom: 0;
     }
 }
+/* ========================================= */
+/* 📱 FIX REAL: HEADER NO PISA CONTENIDO     */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* compensar altura real del navbar */
+    body {
+        padding-top: 140px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* evitar que se rompa el layout */
+    .hero {
+        margin-top: 0;
+    }
+}
+
 
 
 
