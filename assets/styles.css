@@ -700,5 +700,22 @@ footer {
         font-size: 13px;
     }
 }
+/* ========================================= */
+/* 📱 AJUSTE FINO CENTRADO HERO (MOBILE)     */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-box {
+        margin-top: -12px;   /* 🔑 ajuste visual */
+        margin-bottom: 0;
+    }
+}
+
 
 
