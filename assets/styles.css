@@ -565,4 +565,88 @@ footer {
     }
 }
 
+/* ========================================= */
+/* 📱 MOBILE FIX DEFINITIVO (FIXED VIEW)     */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* ===== BLOQUEAR SCROLL FANTASMA ===== */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* ===== HEADER FIJO ===== */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+    }
+
+    /* compensación del header fijo */
+    body {
+        padding-top: 110px;
+    }
+
+    /* ===== NAV ===== */
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 6px 8px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        height: 42px;
+        margin-bottom: 6px;
+    }
+
+    /* ===== HERO FIJO Y ESTABLE ===== */
+    .hero {
+        min-height: calc(100vh - 110px);
+        height: auto;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-box {
+        max-width: 100%;
+        padding: 26px 18px;
+        transform: none !important;
+    }
+
+    .hero-box h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .hero-box p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* ===== FOOTER ESTABLE ===== */
+    .footer {
+        margin-top: 0;
+        padding: 18px 12px;
+        font-size: 13px;
+    }
+}
+
 
