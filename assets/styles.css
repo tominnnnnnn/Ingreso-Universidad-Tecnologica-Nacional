@@ -778,6 +778,42 @@ footer {
         scroll-margin-top: 160px;
     }
 }
+/* ========================================= */
+/* 📱 HERO BOX MÁS CHICO SOLO EN CELULAR     */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* HERO: viewport real disponible */
+    .hero {
+        height: calc(100vh - 140px) !important;
+        min-height: calc(100vh - 140px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* CAJA CENTRAL: más compacta */
+    .hero-box {
+        max-width: 92% !important;
+        padding: 20px 16px !important;
+        border-radius: 12px;
+    }
+
+    /* TÍTULO: más chico pero legible */
+    .hero-box h1,
+    .hero-title {
+        font-size: 22px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* TEXTO: compacto */
+    .hero-box p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+}
+
 
 
 
