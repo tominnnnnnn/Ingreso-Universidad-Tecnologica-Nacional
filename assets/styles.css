@@ -813,6 +813,43 @@ footer {
         line-height: 1.4 !important;
     }
 }
+/* ========================================= */
+/* 📱 FIX FINAL ABSOLUTO – HERO MOBILE       */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* HERO ocupa el espacio exacto visible */
+    .hero {
+        height: calc(100vh - 140px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 14px !important;
+    }
+
+    /* HERO BOX: límite real de altura */
+    .hero-box {
+        max-height: 82vh !important;     /* 🔥 CLAVE */
+        max-width: 94% !important;
+        padding: 18px 16px !important;
+        overflow: hidden !important;     /* 🔥 evita que “empuje” */
+    }
+
+    /* TÍTULO: reducción final */
+    .hero-box h1,
+    .hero-title {
+        font-size: 21px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* TEXTO: compacto definitivo */
+    .hero-box p {
+        font-size: 13.5px !important;
+        line-height: 1.35 !important;
+    }
+}
+
 
 
 
