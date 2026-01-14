@@ -739,6 +739,45 @@ footer {
     }
 }
 
+/* ========================================= */
+/* 🔥 RESET REAL HERO (SIN DESPLAZAMIENTOS) */
+/* ========================================= */
+.hero {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: calc(100vh - 140px) !important;
+    padding: 0 16px !important;
+}
+
+.hero-box {
+    margin: 0 auto !important;
+    transform: none !important;
+    max-width: 900px !important;
+    width: 100% !important;
+}
+/* ========================================= */
+/* 🔥 HEADER FIJO SIN TAPAR CONTENIDO        */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3000;
+    }
+
+    body {
+        padding-top: 140px;
+    }
+
+    /* 🔑 offset real para títulos */
+    h2, .section-title {
+        scroll-margin-top: 160px;
+    }
+}
 
 
 
