@@ -979,6 +979,27 @@ footer {
     top: 0;
     z-index: 9999;
 }
+/* ========================================= */
+/* 🔥 FIX BLOQUE BLANCO FANTASMA (SAFARI)    */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    body.index-page {
+        padding-top: 0 !important;   /* elimina espacio fantasma */
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .hero {
+        margin-top: 140px;            /* compensa header REAL */
+    }
+}
+
 
 
 
