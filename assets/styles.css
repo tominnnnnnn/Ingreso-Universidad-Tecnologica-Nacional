@@ -940,32 +940,31 @@ footer {
         margin-top: 28px !important;
     }
 }
-/* ================= FIX REAL ESPACIO TITULOS MOBILE ================= */
+/* ================= FIX LIMPIO TITULOS MOBILE (SIN ROMPER LAYOUT) ================= */
 @media (max-width: 768px) {
 
-    /* Empujar TODO el contenido debajo del navbar fijo */
-    main,
-    .content {
-        margin-top: 30px !important;
+    /* El navbar es fijo, esto compensa su altura */
+    body {
+        padding-top: 140px;
     }
 
-    /* Separación limpia entre navbar y primer título */
+    /* Separación real entre navbar y títulos */
     .section-title,
-    h1 {
-        padding-top: 18px !important;
+    h2 {
+        margin-top: 40px !important;
     }
 
-    /* Tamaño correcto de títulos en móvil */
+    /* Tamaño más chico de títulos en celular */
     .section-title {
         font-size: 24px !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 18px !important;
     }
 
     h2 {
         font-size: 20px !important;
-        margin-top: 26px !important;
     }
 }
+
 
 
 
