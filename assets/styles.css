@@ -939,6 +939,25 @@ footer {
         color: white;
     }
 }
+/* ========================================= */
+/* 🔥 FIX REAL DEFINITIVO CENTRADO HORIZONTAL */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    .hero {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .hero-box {
+        width: calc(100% - 28px) !important;  /* margen real */
+        max-width: 380px !important;          /* límite visual */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+}
+
 
 
 
