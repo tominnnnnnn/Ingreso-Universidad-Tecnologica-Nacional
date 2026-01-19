@@ -826,69 +826,7 @@ footer {
         margin: 0 !important;
     }
 }
-/* ================= RESET TOTAL HERO MOBILE ================= */
-@media (max-width: 768px) {
 
-    /* Anular TODAS las reglas previas del hero */
-    .hero {
-        all: unset;
-    }
-
-    .hero-box {
-        all: unset;
-    }
-
-    /* Recontruir limpio */
-
-    .hero {
-        position: relative;
-        width: 100%;
-        height: calc(100svh - 140px);
-        background: url("utnfondo.png") no-repeat center center / cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px;
-        box-sizing: border-box;
-    }
-
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        z-index: 1;
-    }
-
-    .hero-box {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: 90%;
-        background: rgba(0,0,0,0.55);
-        border-radius: 12px;
-        padding: 16px 14px;
-        box-sizing: border-box;
-        text-align: center;
-        transform: translateY(-14px);
-
-    }
-
-    .hero-box h1 {
-        font-size: 20px;
-        line-height: 1.1;
-        margin-bottom: 8px;
-        color: white;
-        white-space: normal;
-    }
-
-    .hero-box p {
-        font-size: 13.5px;
-        line-height: 1.35;
-        margin: 0;
-        color: white;
-    }
-}
 /* ========================================= */
 /* 🔥 FIX REAL DEFINITIVO CENTRADO HORIZONTAL */
 /* ========================================= */
@@ -1028,6 +966,38 @@ footer {
         margin-top: 26px !important;
     }
 }
+/* ========== FIX DEFINITIVO ESPACIO SUPERIOR MOBILE ========== */
+@media (max-width: 768px) {
+
+    /* Navbar fijo */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3000;
+    }
+
+    /* Empuja TODO el documento debajo del navbar */
+    body {
+        padding-top: 150px !important;
+    }
+
+    /* Primera sección de cada página */
+    main,
+    .content {
+        margin-top: 20px !important;
+    }
+
+    /* TÍTULOS DE TODAS LAS SECCIONES */
+    .section-title,
+    h1 {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+        font-size: 24px !important;
+    }
+}
+
 
 
 
