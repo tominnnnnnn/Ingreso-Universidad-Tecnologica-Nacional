@@ -997,6 +997,37 @@ footer {
         font-size: 24px !important;
     }
 }
+/* ================= FIX REAL NAVBAR + TITULOS MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* Navbar fijo correcto */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3000;
+    }
+
+    /* El body se separa dinámicamente */
+    body {
+        padding-top: 0 !important;
+    }
+
+    /* Empujar todo usando el navbar real */
+    .page-wrapper {
+        padding-top: 140px;
+    }
+
+    /* Títulos de TODAS las secciones */
+    h1,
+    .section-title {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+        font-size: 24px !important;
+    }
+}
+
 
 
 
