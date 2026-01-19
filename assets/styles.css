@@ -740,23 +740,6 @@ footer {
 }
 
 /* ========================================= */
-/* 🔥 RESET REAL HERO (SIN DESPLAZAMIENTOS) */
-/* ========================================= */
-.hero {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: calc(100vh - 140px) !important;
-    padding: 0 16px !important;
-}
-
-.hero-box {
-    margin: 0 auto !important;
-    transform: none !important;
-    max-width: 900px !important;
-    width: 100% !important;
-}
-/* ========================================= */
 /* 🔥 HEADER FIJO SIN TAPAR CONTENIDO        */
 /* ========================================= */
 @media (max-width: 768px) {
@@ -849,6 +832,51 @@ footer {
         line-height: 1.35 !important;
     }
 }
+/* ================= HERO MOBILE REAL FINAL ================= */
+@media (max-width: 768px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Hero con altura exacta visible */
+    .hero {
+        height: calc(100svh - 140px) !important;
+        min-height: calc(100svh - 140px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 12px !important;
+    }
+
+    /* Caja SIEMPRE entra completa */
+    .hero-box {
+        box-sizing: border-box !important;
+        max-height: 100% !important;
+        width: 100% !important;
+        max-width: 92% !important;
+        padding: 16px 14px !important;
+        overflow: auto !important;
+        transform: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* Título compacto real */
+    .hero-box h1 {
+        font-size: 20px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 6px !important;
+        white-space: normal !important;
+    }
+
+    /* Texto compacto real */
+    .hero-box p {
+        font-size: 13.2px !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+    }
+}
+
 
 
 
