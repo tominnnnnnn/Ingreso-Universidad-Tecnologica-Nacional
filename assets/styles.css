@@ -981,6 +981,28 @@ footer {
         margin: 0;
     }
 }
+/* ================= AJUSTE FINO TITULOS MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* Separación real entre navbar fijo y títulos */
+    .section-title,
+    h1, h2 {
+        margin-top: 30px !important;
+    }
+
+    /* Títulos principales más chicos en mobile */
+    .section-title {
+        font-size: 24px !important;
+        margin-bottom: 18px !important;
+    }
+
+    /* Títulos internos (h2) más armónicos */
+    h2 {
+        font-size: 20px !important;
+        margin-top: 28px !important;
+    }
+}
+
 
 
 
