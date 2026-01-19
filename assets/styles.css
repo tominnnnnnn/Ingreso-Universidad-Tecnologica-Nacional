@@ -920,6 +920,8 @@ footer {
         padding: 16px 14px;
         box-sizing: border-box;
         text-align: center;
+            transform: translateY(-14px);
+
     }
 
     .hero-box h1 {
@@ -937,6 +939,7 @@ footer {
         color: white;
     }
 }
+
 
 
 
