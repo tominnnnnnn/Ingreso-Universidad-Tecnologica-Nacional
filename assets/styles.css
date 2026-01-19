@@ -957,6 +957,29 @@ footer {
         box-sizing: border-box !important;
     }
 }
+/* ========================================= */
+/* 🔥 FIX CLICK LOGO BLOQUEADO EN GITHUB     */
+/* ========================================= */
+
+/* El hero nunca puede interceptar clicks del header */
+.hero,
+.hero::before {
+    pointer-events: none;
+}
+
+/* La caja interna sí debe ser clickeable */
+.hero-box,
+.hero-box * {
+    pointer-events: auto;
+}
+
+/* El navbar siempre arriba de todo */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
 
 
 
