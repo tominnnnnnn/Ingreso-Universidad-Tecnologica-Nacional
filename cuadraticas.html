@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -19,7 +20,10 @@
     <!-- NAV -->
     <header class="navbar">
         <div class="nav-container">
-            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+<a href="https://www.frsr.utn.edu.ar/" target="_blank" rel="noopener">
+    <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+</a>
+
             <nav>
                 <a href="index.html">Inicio</a>
                 <a href="algebra.html">Ecuaciones Algebraicas</a>
@@ -101,26 +105,40 @@
         <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
     </footer>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("fade-in");
-    });
+document.addEventListener("DOMContentLoaded", () => {
 
-    // Suaviza la salida al hacer clic en cualquier link
+    document.body.classList.add("fade-in");
+
     document.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", e => {
-            const link = a.getAttribute("href");
 
-            // evita fade cuando es un link a PDF o #
+        a.addEventListener("click", e => {
+
+            const link = a.getAttribute("href");
+            const target = a.getAttribute("target");
+
+            // 🔥 1. Links en nueva pestaña → NO TOCAR
+            if (target === "_blank") return;
+
+            // 🔥 2. Links externos → NO TOCAR
+            if (link.startsWith("http://") || link.startsWith("https://")) return;
+
+            // 🔥 3. PDFs y anclas internas → NO TOCAR
             if (link.endsWith(".pdf") || link.startsWith("#")) return;
 
+            // 🔒 Solo páginas internas del sitio usan fade
             e.preventDefault();
             document.body.classList.remove("fade-in");
+
             setTimeout(() => {
-                window.location = link;
-            }, 300); // tiempo de salida suave
+                window.location.href = link;
+            }, 300);
         });
+
     });
+
+});
 </script>
 
 </body>
 </html>
+
