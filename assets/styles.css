@@ -964,6 +964,42 @@ footer {
         font-size: 20px !important;
     }
 }
+/* ========================================= */
+/* 🔵 LOGO DECORATIVO DE FONDO (PC)          */
+/* ========================================= */
+
+@media (min-width: 769px) {
+
+    .with-watermark {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .with-watermark::after {
+        content: "";
+        position: absolute;
+
+        top: 50%;
+        right: -25%;               /* hace que se vea solo la mitad */
+        transform: translateY(-50%);
+
+        width: 900px;              /* tamaño GRANDE */
+        height: 900px;
+
+        background: url("fondo pagina.png") no-repeat center;
+        background-size: contain;
+
+        opacity: 0.08;             /* transparencia elegante */
+        pointer-events: none;      /* no interfiere con clicks */
+        z-index: 0;
+    }
+
+    /* El contenido siempre arriba */
+    .with-watermark > * {
+        position: relative;
+        z-index: 1;
+    }
+}
 
 
 
