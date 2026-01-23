@@ -1000,6 +1000,77 @@ footer {
         z-index: 1;
     }
 }
+/* ================================================= */
+/* 📱 MOBILE FINAL LIMPIO – CONTENIDO + WATERMARK   */
+/* ================================================= */
+@media (max-width: 768px) {
+
+    /* Evita scroll lateral */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .content {
+        margin: 40px auto;
+        padding: 0 18px;
+    }
+
+    /* TÍTULO PRINCIPAL */
+    .section-title {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 22px;
+        text-align: center;
+    }
+
+    /* SUBTÍTULOS */
+    h2 {
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    /* TEXTO */
+    .intro {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* ===== WATERMARK MOBILE ===== */
+    .with-watermark {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .with-watermark::after {
+        content: "";
+        position: absolute;
+
+        top: 50%;
+        right: -55%;                 /* se ve solo una parte */
+        transform: translateY(-50%);
+
+        width: 520px;
+        height: 520px;
+
+        background: url("fondo pagina.png") no-repeat center;
+        background-size: contain;
+
+        opacity: 0.06;               /* sutil */
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* El contenido queda arriba del logo */
+    .with-watermark > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 
 
 
