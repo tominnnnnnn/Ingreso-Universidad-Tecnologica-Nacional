@@ -1070,6 +1070,31 @@ footer {
         z-index: 1;
     }
 }
+/* ========================================= */
+/* 📱 MOBILE: NAVBAR NO FIJO (SCROLL NORMAL) */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        position: static;   /* 🔥 deja de estar fijo */
+    }
+
+    body {
+        padding-top: 0;     /* elimina compensaciones viejas */
+    }
+}
+/* ========================================= */
+/* 📱 MOBILE: ESPACIADO TITULO DE SECCIÓN    */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    .section-title {
+        margin-top: 50px;      /* 🔥 aire real */
+        margin-bottom: 24px;
+        font-size: 24px;
+        text-align: center;
+    }
+}
 
 
 
