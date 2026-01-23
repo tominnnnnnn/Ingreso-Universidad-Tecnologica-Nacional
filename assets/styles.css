@@ -1000,31 +1000,8 @@ footer {
         z-index: 1;
     }
 }
-/* ================= WATERMARK MOBILE FIX ================= */
-@media (max-width: 768px) {
 
-    .with-watermark::before {
-        background-size: 120vw;     /* más chico que en PC */
-        background-position: center 25%;
-        opacity: 0.06;              /* más sutil en móvil */
-    }
 
-    .with-watermark {
-        min-height: calc(100vh - 80px);
-        padding-top: 120px;         /* espacio real debajo del navbar */
-    }
-
-    .with-watermark .content {
-        padding: 0 20px;
-    }
-
-    /* Títulos mobile más prolijos */
-    .section-title {
-        font-size: 22px;
-        margin-top: 0;
-        margin-bottom: 22px;
-    }
-}
 
 
 
