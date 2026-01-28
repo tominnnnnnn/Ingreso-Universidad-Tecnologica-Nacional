@@ -1095,6 +1095,24 @@ footer {
         text-align: center;
     }
 }
+/* ========================================= */
+/* 🖥️ DESKTOP: NAV SECCIONES EN LÍNEA        */
+/* ========================================= */
+@media (min-width: 769px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        white-space: nowrap;
+        font-size: 15px;
+        margin: 0;
+    }
+}
 
 
 
