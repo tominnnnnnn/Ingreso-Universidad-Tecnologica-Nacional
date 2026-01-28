@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometría Elemental</title>
 
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="https://www.frsr.utn.edu.ar/" target="_blank" rel="noopener">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="algebra.html">Ecuaciones Algebraicas</a>
+            <a href="coordenadas.html">Coordenadas y Recta</a>
+            <a href="lineales.html">Ecuaciones Lineales</a>
+            <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+            <a href="polinomios.html">Polinomios</a>
+            <a href="trigonometria.html" class="active">Trigonometría</a>
+        </nav>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="with-watermark">
+
+    <div class="content">
+
+        <h1 class="section-title">Trigonometría elemental</h1>
+
+        <p class="intro">
+            La trigonometría es la parte de la matemática que estudia los triángulos,
+            las relaciones entre sus lados y ángulos, y las funciones trigonométricas
+            seno, coseno, tangente, cotangente, secante y cosecante.
+        </p>
+
+        <h2>Conceptos fundamentales</h2>
+
+        <ul class="concept-list">
+            <li><strong>Ángulo:</strong> abertura formada por dos semirrectas con un origen común.</li>
+            <li><strong>Medida de ángulos:</strong> puede expresarse en grados sexagesimales o en radianes.</li>
+            <li><strong>Triángulo:</strong> figura geométrica de tres lados; puede clasificarse según sus lados o ángulos.</li>
+            <li><strong>Triángulo rectángulo:</strong> triángulo que posee un ángulo de 90°.</li>
+            <li><strong>Razones trigonométricas:</strong> relaciones entre los lados de un triángulo rectángulo:
+                seno, coseno, tangente, cotangente, secante y cosecante.</li>
+            <li><strong>Funciones trigonométricas:</strong> extensión de las razones trigonométricas a cualquier ángulo.</li>
+            <li><strong>Identidades trigonométricas:</strong> igualdades que se cumplen para todos los valores del ángulo.</li>
+            <li><strong>Aplicaciones:</strong> cálculo de distancias, alturas, pendientes y resolución de problemas geométricos.</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+        <a class="pdf-box" href="assets/TEORÍA TRIGONOMETRÍA.pdf" target="_blank">
+            <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+            <span class="pdf-text">Teoría – Trigonometría</span>
+        </a>
+
+        <h2>Modelos de examen</h2>
+
+        <div class="pdf-box">
+            <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+            <span class="pdf-text">Próximamente</span>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.body.classList.add("fade-in");
+
+    document.querySelectorAll("a").forEach(a => {
+
+        a.addEventListener("click", e => {
+
+            const link = a.getAttribute("href");
+            const target = a.getAttribute("target");
+
+            if (target === "_blank") return;
+            if (link.startsWith("http")) return;
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+
+            setTimeout(() => {
+                window.location.href = link;
+            }, 300);
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
